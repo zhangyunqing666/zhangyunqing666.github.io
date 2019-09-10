@@ -147,15 +147,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="简答题"><a href="#简答题" class="headerlink" title="简答题"></a>简答题</h1><p>##1. 解释游戏对象（GameObjects）和资源（Assets）的区别与联系。<br>游戏对象是出现在游戏场景中的所有物体，是资源整合的具体表现。游戏对象有专有属性，是能够容纳实现实际功能的组件。<br>资源是可以在游戏或项目中使用的任何项目的表示。资源可能来自Unity之外创建的文件，例如3D模型、音频文件、图像或Unity支持的任何其他类型的文件。还有一些资源类型可以在Unity中创建，比如动画控制器、音频混频器或渲染纹理。<br>二者的联系：游戏对象可以作为资源保存（从场景拖到资源栏）。资源可以作为组建或游戏对象创建游戏对象实例，资源还可以被多个游戏对象使用，成为游戏对象的属性。</p>
-<p>##2. 下载几个游戏案例，分别总结资源、对象组织的结构（指资源的目录组织结构与游戏对象树的层次结构）<br>在github上下载了一个射击类小游戏，分析资源和游戏对象树的结构。<br>先看资源的组织结构，如图：</p>
+        <h1 id="简答题"><a href="#简答题" class="headerlink" title="简答题"></a>简答题</h1><h2 id="1-解释游戏对象（GameObjects）和资源（Assets）的区别与联系。"><a href="#1-解释游戏对象（GameObjects）和资源（Assets）的区别与联系。" class="headerlink" title="1. 解释游戏对象（GameObjects）和资源（Assets）的区别与联系。"></a>1. 解释游戏对象（GameObjects）和资源（Assets）的区别与联系。</h2><p>游戏对象是出现在游戏场景中的所有物体，是资源整合的具体表现。游戏对象有专有属性，是能够容纳实现实际功能的组件。<br>资源是可以在游戏或项目中使用的任何项目的表示。资源可能来自Unity之外创建的文件，例如3D模型、音频文件、图像或Unity支持的任何其他类型的文件。还有一些资源类型可以在Unity中创建，比如动画控制器、音频混频器或渲染纹理。<br>二者的联系：游戏对象可以作为资源保存（从场景拖到资源栏）。资源可以作为组建或游戏对象创建游戏对象实例，资源还可以被多个游戏对象使用，成为游戏对象的属性。</p>
+<h2 id="2-下载几个游戏案例，分别总结资源、对象组织的结构（指资源的目录组织结构与游戏对象树的层次结构）"><a href="#2-下载几个游戏案例，分别总结资源、对象组织的结构（指资源的目录组织结构与游戏对象树的层次结构）" class="headerlink" title="2. 下载几个游戏案例，分别总结资源、对象组织的结构（指资源的目录组织结构与游戏对象树的层次结构）"></a>2. 下载几个游戏案例，分别总结资源、对象组织的结构（指资源的目录组织结构与游戏对象树的层次结构）</h2><p>在github上下载了一个射击类小游戏，分析资源和游戏对象树的结构。<br>先看资源的组织结构，如图：</p>
 <p><img src="https://img-blog.csdnimg.cn/20190908112344451.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1poYW5neXVucWluZ0dD,size_16,color_FFFFFF,t_70" alt></p>
 <p>可以看出游戏资源的内容分为音频、脚本、材质等等，按照文件的类型的不同，添加到不同的文件夹当中来实现资源的目录组织结构，如脚本文件都放在Scripts中：</p>
 <p><img src="https://img-blog.csdnimg.cn/20190908122104219.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1poYW5neXVucWluZ0dD,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <p>而游戏对象树类似于树，一个游戏对象往往是包括了多个子对象。子对象又包括了它的子对象，我下载的这个游戏虽然体现的不是很明显，但是也是能看出来的，游戏对象包括玩家，地图上的各个点以及四个方向的光照：</p>
 <p><img src="https://img-blog.csdnimg.cn/2019090815235446.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1poYW5neXVucWluZ0dD,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>##3. 编写一个代码，使用 debug 语句来验证 MonoBehaviour 基本行为或事件触发的条件</p>
-<ul>
+<h2 id="3-编写一个代码，使用-debug-语句来验证-MonoBehaviour-基本行为或事件触发的条件"><a href="#3-编写一个代码，使用-debug-语句来验证-MonoBehaviour-基本行为或事件触发的条件" class="headerlink" title="3. 编写一个代码，使用 debug 语句来验证 MonoBehaviour 基本行为或事件触发的条件"></a>3. 编写一个代码，使用 debug 语句来验证 MonoBehaviour 基本行为或事件触发的条件</h2><ul>
 <li><p>基本行为包括 Awake() Start() Update() FixedUpdate() LateUpdate()</p>
 </li>
 <li><p>常用事件包括 OnGUI() OnDisable() OnEnable()<br>代码如下，只是在事件中用log输出一段话：</p>
@@ -186,8 +185,7 @@
 <li><p>OnGUI() : 绘制GUI时候触发。一般在这个函数里绘制GUI菜单。</p>
 </li>
 </ul>
-<p>##4. 查找脚本手册，了解 GameObject，Transform，Component对象</p>
-<ul>
+<h2 id="4-查找脚本手册，了解-GameObject，Transform，Component对象"><a href="#4-查找脚本手册，了解-GameObject，Transform，Component对象" class="headerlink" title="4. 查找脚本手册，了解 GameObject，Transform，Component对象"></a>4. 查找脚本手册，了解 GameObject，Transform，Component对象</h2><ul>
 <li>分别翻译官方对三个对象的描述（Description）</li>
 <li>描述下图中 table 对象（实体）的属性、table 的 Transform 的属性、 table 的部件<ul>
 <li>本题目要求是把可视化图形编程界面与 Unity API 对应起来，当你在 Inspector 面板上每一个内容，应该知道对应 API。</li>
